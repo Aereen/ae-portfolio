@@ -21,3 +21,12 @@ body::-webkit-scrollbar-thumb:hover {
 
 .yellow-text {
     color: #CF9421; }
+
+body {
+    background-color: #928DAB;}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);}
