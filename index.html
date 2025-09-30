@@ -16,30 +16,30 @@
 <header class="background-secondary border-gray-200 px-4 lg:px-6 py-2.5">
         <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto gray-text">
             <div class="flex items-end gray-text">
-                <span class="text-2xl mx-2.5 w-10 h-10 text-center rounded-full ring-2 ring-gray-600">æ</span>
-                <span class="self-center text-xl font-semibold whitespace-nowrap">Eirene Grace</span>
+                <span class="self-center text-xl font-bold whitespace-nowrap"><i class="fa-solid fa-chevron-left"></i></span>
+                <span class="self-center mx-1 font-semibold text-md whitespace-nowrap">Eirene Grace</span>
+                <span class="self-center text-xl font-bold whitespace-nowrap">/<i class="fa-solid fa-chevron-right"></i></span>
             </div>
-            <div class="flex items-center lg:order-8">
-                <a href="#" class="font-medium rounded-lg text-[#1F1C2C] border-0 bg-[#928DAB] text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none">Contact</a>
-                <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                    <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </button>
-            </div>
-            <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
-                <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-5 lg:mt-0">
-                    <li>
-                        <a href="#about" class="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">About</a>
-                    </li>
-                    <li>
-                        <a href="#skill" class="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Skill</a>
-                    </li>
-                    <li>
-                        <a href="#project" class="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Project</a>
-                    </li>
-                </ul>
-            </div>
+            <!-- Right: Nav (desktop) + Login + Hamburger (mobile) -->
+        <div class="flex items-center space-x-4">
+            <!-- Navigation (Desktop) -->
+            <nav class="hidden md:flex">
+                <ul class="flex space-x-8 text-lg font-semibold">
+                    <li><a href="#about" class="text-white hover:text-gray-300">About</a></li>
+                    <li><a href="#project" class="text-white hover:text-gray-300">Projects</a></li>
+            </ul>
+            </nav>
+
+            <!-- Login Button (Desktop Only) -->
+            <a href="#contact" class="hidden px-4 py-2 text-white hover:bg-gray-400 rounded-md md:inline-block bg-[#928DAB]">
+                Contact
+            </a>
+
+            <!-- Hamburger Icon (Mobile Only) -->
+            <button id="menu-toggle" class="text-2xl text-white md:hidden focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
         </div>
 </header>
 
@@ -52,50 +52,283 @@
             <div class="relative z-10 max-w-5xl px-4 py-8 md:px-8">
                 <h1 class="mb-4 font-bold text-7xl max-sm:text-5xl">Eirene Grace Armilla</h1>
                 <p id="typing-text" class="mb-6 text-5xl font-bold yellow-text max-sm:text-3xl h-[3rem] sm:h-[4rem] overflow-hidden"></p>
-                <h2 class="px-2 text-2xl max-sm:text-sm">
+                <h2 class="px-2 text-xl lg:text-2xl">
                     Passionate about creating innovative digital solutions that make a difference.<br>
                     Transform ideas into creative and functional experiences.
                 </h2>
                 <div class="flex justify-center mt-8">
-                    <button class="inline-flex items-center justify-center hover:color- px-5 py-3 mx-2 text-md text-center border rounded-lg focus:ring-[#1F1C2C] focus:ring-4 ">
+                    <button class="inline-flex items-center justify-center px-5 py-3 mx-2 text-center hover:bg-gray-900 border-[#1F1C2C] rounded-lg background-secondary hover:color- text-md ">
                         <a href="#project">View Projects</a>
                     </button>
-                    <button class="inline-flex items-center justify-center px-5 py-3 mx-2 text-md text-center border rounded-lg focus:ring-[#1F1C2C] focus:ring-4 ">
+                    <button class="inline-flex items-center justify-center px-5 hover:bg-white hover:text-[#1F1C2C] py-3 mx-2 text-md text-center border rounded-lg focus:ring-[#1F1C2C] focus:ring-4 ">
                         <a href="#about">Learn More</a>
                 </div>
             </div>
 </section>
 
+<!--BANNER-->
+<section>
+    <div class="flex flex-col items-center lg:flex-row lg:items-start lg:gap-10 background-secondary">
+        <div class="flex-1 p-8">
+            <h2 class="mb-4 text-5xl font-bold text-center gray-text">Building Digital Experiences</h2>
+            <p class="p-5 mx-auto text-xl font-medium text-center text-gray-500 lg:text-xl lg:w-9/12">
+                As an IT Graduate with a passion for creating exceptional digital experiences, I combine technical expertise with creative design thinking.
+                My approach focuses on delivering user-centered solutions that are both beautiful and functional.
+            </p>
+        </div>
+    </div>
+</section>
+
+
 <!--ABOUT-->
 <section id="about" class="px-4 mt-10 md:px-10">
     <div class="flex flex-col items-center lg:flex-row lg:items-start lg:gap-10">
-        <div class="flex justify-center mb-6 lg:mb-0 lg:w-1/3">
+        <div class="flex flex-col items-center mb-6 lg:mb-0 lg:w-1/3">
             <img src="./src/asset/GradPic.jpg" 
                 alt="Eirene Grace Armilla" 
-                class="w-full max-w-xs rounded-lg shadow-lg dark:shadow-gray-700 lg:max-w-sm">
+                class="w-full max-w-sm rounded-lg shadow-lg dark:shadow-gray-700 lg:max-w-sm">
+
+            <div class="flex gap-3 mt-4">
+                <!-- DOWNLOAD CV -->
+                <a href="./src/asset/Armilla_Eirene_Grace-Resume.pdf" 
+                download="Armilla_Eirene_Grace-Resume.pdf" 
+                class="w-36 h-10 lg:w-48 flex items-center justify-center rounded-lg bg-[#37304d] text-gray-300 
+                        text-md font-medium text-center border-0 hover:bg-transparent hover:border-2 
+                        hover:border-[#37304d] hover:text-black focus:ring-4 focus:outline-none">
+                    Download CV
+                </a>
+
+                <!-- LEARN MORE -->
+                <button id="openModal" 
+                        class="w-36 h-10 lg:w-48 flex items-center justify-center rounded-lg bg-[#37304d] text-gray-300 
+                            text-md font-medium text-center border-0 hover:bg-transparent hover:border-2 
+                            hover:border-[#37304d] hover:text-black focus:ring-4 focus:outline-none">
+                    Learn More
+                </button>
+            </div>
         </div>
 
         <div class="flex-1">
-            <h2 class="mb-4 text-4xl font-bold text-center underline md:text-5xl lg:text-left">About Me</h2>
-            <p class="mb-6 text-lg text-justify md:text-lg">
-            I specialize in a wide range of skills including web development, mobile app development, UI/UX design, 
-            and digital marketing. I am a passionate web developer with a knack for creating dynamic and responsive 
-            web applications. My journey in tech started with a curiosity for how things work, and it has evolved into 
-            a full-fledged career where I get to solve real-world problems through code.
+            <!-- ABOUT ME -->
+            <h2 class="mb-4 text-5xl font-bold text-center underline">
+                About Me
+            </h2>
+
+            <p class="m-5 text-lg font-medium text-justify">
+                I specialize in a wide range of skills including web development, web design, UI/UX design, 
+                and project management. I am a passionate web developer with a knack for creating dynamic and responsive 
+                web applications. My journey in tech started with a curiosity for how websites work, and it has evolved into 
+                a full-fledged career where I get to solve real-world problems through code and design.
             </p>
 
-            <div class="flex justify-center mb-10 lg:justify-start">
-                <a href="./src/asset/Armilla_Eirene_Grace-Resume.pdf" download="Armilla_Eirene_Grace-Resume.pdf" 
-                    class="w-48 h-10 flex items-center justify-center rounded-lg bg-[#37304d] text-gray-300 
-                            text-md font-medium text-center border-0 hover:bg-transparent hover:border-2 
-                            hover:border-[#37304d] hover:text-black focus:ring-4 focus:outline-none">
-                    Download Resume
-                </a>
+            <!-- CARDS -->
+            <div class="grid grid-cols-1 gap-6 m-5 lg:grid-cols-3">
+                <div class="w-full p-6 transition-shadow shadow-lg border-2 border-[#1F1C2C] 
+                            bg-transparent text-[#1F1C2C] rounded-2xl hover:shadow-2xl">
+                    <div class="mb-4 text-6xl text-center">
+                        <i class="fa-solid fa-object-ungroup"></i>
+                    </div>
+                    <h3 class="mb-4 text-2xl font-bold text-center">Responsive Design</h3>
+                    <p class="text-base text-center md:text-lg">
+                        I create designs that adapt seamlessly to different screen sizes and devices.
+                    </p>
+                </div>
+
+                <div class="w-full p-6 transition-shadow shadow-lg border-2 border-[#1F1C2C] 
+                            bg-transparent text-[#1F1C2C] rounded-2xl hover:shadow-2xl">
+                    <div class="mb-4 text-6xl text-center">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="mb-4 text-2xl font-bold text-center">Modern UI Styling</h3>
+                    <p class="text-base text-center md:text-lg">
+                        I focus on creating visually appealing and user-friendly interfaces.
+                    </p>
+                </div>
+
+                <div class="w-full p-6 transition-shadow shadow-lg border-2 border-[#1F1C2C] 
+                            bg-transparent text-[#1F1C2C] rounded-2xl hover:shadow-2xl">
+                    <div class="mb-4 text-6xl text-center">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="mb-4 text-2xl font-bold text-center">Clean Code</h3>
+                    <p class="text-base text-center md:text-lg">
+                        I write clean, maintainable, and efficient code following best practices.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div id="capabilitiesModal" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black bg-opacity-50">
+        <div class="relative w-full max-w-4xl p-6 mx-4 overflow-y-auto shadow-lg rounded-2xl bg-[#928DAB] max-h-[90vh]">
+            <button id="closeModal" class="absolute text-2xl font-bold text-gray-700 top-4 right-4 hover:text-black dark:hover:text-gray-200">✖</button>
+
+            <!-- WHAT CAN I DO? -->
+            <h2 class="mb-6 text-3xl font-bold text-center text-[#1F1C2C] sm:text-4xl">What Can I Do?</h2>
+            <ul class="mb-10 space-y-4 text-base font-medium text-[#1F1C2C] dark:text-gray-200 sm:text-lg">
+                <li class="flex items-center gap-3">
+                    <i class="fa-solid fa-code text-[#37304d] text-xl"></i> Web Development
+                </li>
+                <li class="flex items-center gap-3">
+                    <i class="fa-solid fa-paintbrush text-[#37304d] text-xl"></i> Web Design
+                </li>
+                <li class="flex items-center gap-3">
+                    <i class="fa-solid fa-tasks text-[#37304d] text-xl"></i> Project Management
+                </li>
+                <li class="flex items-center gap-3">
+                    <i class="fa-solid fa-object-ungroup text-[#37304d] text-xl"></i> UI/UX Design
+                </li>
+            </ul>
+
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+                <!-- EXPERIENCE -->
+                <div class="w-full p-6 transition-shadow shadow-lg border-2 border-[#1F1C2C] 
+                            bg-transparent text-[#1F1C2C] rounded-2xl hover:shadow-2xl">
+                    <h3 class="mb-4 text-2xl font-bold text-center sm:text-3xl">Experience</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <h4 class="text-lg font-medium">Freelance Web Designer/Developer</h4>
+                                <p class="text-sm text-gray-600">July 2025 - September 2025</p>
+                                    <p class="text-gray-800">Developing and maintain company websites using Wordpress and Elementor. Create Quality Assurance documentation for the developed websites.</p>
+                            <h5 class="mt-2 underline">Skills:</h5>
+                                <p class="text-gray-800">Search Engine Optimization (SEO), Quality Assurance (QA), User Experience, Web Design, Data Entry</p>
+                        </li>
+                        <li>
+                            <h4 class="text-lg font-medium">Web Designer/Developer Intern</h4>
+                                <p class="text-sm text-gray-600">February 2025 - May 2025</p>
+                                    <p class="text-gray-800">Designed and developed custom websites for small businesses and individuals. Managed all aspects of the web development process, including client communication, design, coding, and deployment.</p>
+                            <h5 class="mt-2 underline">Skills:</h5>
+                                <p class="text-gray-800">Search Engine Optimization (SEO), User Interface Design, Documentation, User Experience, Web Design</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- EDUCATION -->
+                <div class="w-full p-6 transition-shadow shadow-lg border-2 border-[#1F1C2C] 
+                            bg-transparent text-[#1F1C2C] rounded-2xl hover:shadow-2xl">
+                    <h3 class="mb-4 text-2xl font-bold text-center sm:text-3xl">Education</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <h4 class="text-lg font-medium">Bachelor of Science in Information Technology (Information and Network Security Elective Track)</h4>
+                                <p class="text-sm text-gray-600">University of Makati | August 2020 - August 2025</p>
+                            <h5 class="mt-2 underline">Skills:</h5>
+                                <p class="text-gray-800">Web Development, UI/UX Design, Database Management, Network Security, Cloud Computing, Agile Methodologies, Project Management.</p>
+                        </li>
+                        <li>
+                            <h4 class="text-lg font-medium">ICT Strand: IT in Mobile App and Web Development </h4>
+                                <p class="text-sm text-gray-600">STI College Pasay-Edsa | August 2018 - March 2020</p>
+                            <h5 class="mt-2 underline">Skills:</h5>
+                                <p class="text-gray-800">Web Development, Mobile App Development</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!--PROJECTS-->
+<section id="project" class="py-10">
+    <div class="container px-4 mx-auto">
+        <h2 class="text-5xl font-bold text-center underline mb-7">Projects</h2>
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+
+            <div class="flex flex-col overflow-hidden transition-shadow shadow-lg rounded-2xl hover:shadow-2xl">
+                <div class="h-64 overflow-hidden">
+                    <img src="./src/asset/project1.jpg" alt="Project 1"
+                        class="object-cover w-full h-full transition-transform duration-500 hover:scale-105">
+                </div>
+                <div class="flex flex-col flex-1 p-6 text-white background-secondary">
+                    <h3 class="mb-2 text-2xl font-bold">GuidanceHub: A Central Platform for Guidance and Counseling Services</h3>
+                    <p class="flex-1 mb-4 text-base text-gray-300">
+                        A comprehensive system featuring database management, student engagement tools, counseling support (self-assessments, referrals, session tracking), resource access, content and user management, plus robust data reporting.
+                    </p>
+                    <div class="flex gap-3">
+                        <div class="inline-block px-4 py-2 text-sm font-semibold w-48 text-center text-gray-900 bg-[#928DAB] rounded-lg">Web Development</div>
+                    </div>
+                </div>
             </div>
 
-            <div class="max-w-md lg:max-w-3xl">
+            <div class="flex flex-col overflow-hidden transition-shadow shadow-lg rounded-2xl hover:shadow-2xl">
+                <div class="h-64 overflow-hidden">
+                    <a href="./src/asset/project2.mp4"> 
+                        <img src="./src/asset/project2.jpg" alt="Project 2" class="object-cover w-full h-full transition-transform duration-500 hover:scale-105"> 
+                    </a>
+                </div>
+                <div class="flex flex-col flex-1 p-6 text-white background-secondary">
+                    <h3 class="mb-2 text-2xl font-bold">An Enhancement to Reach Potential and Elevating Erovoutika International Robotics Academy Learning Management System</h3>
+                    <p class="flex-1 mb-4 text-base text-gray-300">
+                        A comprehensive learning management system designed to enhance the educational experience at Erovoutika International Robotics Academy.
+                    </p>
+                    <div class="flex gap-3">
+                        <div class="inline-block px-4 py-2 text-sm font-semibold w-48 text-center text-gray-900 bg-[#928DAB] rounded-lg">Web Development</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col overflow-hidden transition-shadow shadow-lg rounded-2xl hover:shadow-2xl">
+                <div class="h-64 overflow-hidden">
+                    <a href="./src/asset/project3.mp4"> 
+                        <img src="./src/asset/project3.jpg" alt="Project 3" class="object-cover w-full h-full transition-transform duration-500 hover:scale-105"> 
+                    </a>
+                </div>
+                <div class="flex flex-col flex-1 p-6 text-white background-secondary">
+                    <h3 class="mb-2 text-2xl font-bold">UHive: Login System</h3>
+                    <p class="flex-1 mb-4 text-base text-gray-300">
+                        A secure and reliable login system that verifies user identities, safeguards sensitive data, and prevents unauthorized access while maintaining user trust.
+                    </p>
+                    <div class="flex gap-3">
+                        <div class="inline-block px-4 py-2 text-sm font-semibold w-48 text-center text-gray-900 bg-[#928DAB] rounded-lg">Web Development</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col overflow-hidden transition-shadow shadow-lg rounded-2xl hover:shadow-2xl">
+                <div class="h-64 overflow-hidden">
+                    <a href="https://www.figma.com/proto/usSiD76mv8dTSkt0gC9tQI/LifeHealthConsult?node-id=36-140&p=f&t=GYbgwa66OlHjARar-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"> 
+                        <img src="./src/asset/project4.jpg" alt="Project 4" class="object-cover w-full h-full transition-transform duration-500 hover:scale-105"> 
+                    </a>
+                </div>
+                <div class="flex flex-col flex-1 p-6 text-white background-secondary">
+                    <h3 class="mb-2 text-2xl font-bold">LifeHealthConsult</h3>
+                    <p class="flex-1 mb-4 text-base text-gray-300">
+                        A telehealth platform connecting patients with healthcare professionals for remote consultations.
+                    </p>
+                    <div class="flex gap-3">
+                        <div class="inline-block px-4 py-2 text-sm font-semibold w-48 text-center text-gray-900 bg-[#928DAB] rounded-lg">UI/UX Design</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col overflow-hidden transition-shadow shadow-lg rounded-2xl hover:shadow-2xl">
+                <div class="h-64 overflow-hidden">
+                    <a href="https://mldesc.com/"> 
+                        <img src="./src/asset/project5.jpg" alt="Project 5" class="object-cover w-full h-full transition-transform duration-500 hover:scale-105"> 
+                    </a>
+                </div>
+                <div class="flex flex-col flex-1 p-6 text-white background-secondary">
+                    <h3 class="mb-2 text-2xl font-bold">MLDESC: Engineering and Surveying Services</h3>
+                    <p class="flex-1 mb-4 text-base text-gray-300">
+                        A platform providing engineering and surveying services with a focus on accuracy and efficiency.
+                    </p>
+                    <div class="flex gap-3">
+                        <div class="inline-block px-4 py-2 text-sm font-semibold w-48 text-center text-gray-900 bg-[#928DAB] rounded-lg">Web Development</div>
+                        <div class="inline-block px-4 py-2 text-sm font-semibold w-48 text-center text-gray-900 bg-[#928DAB] rounded-lg">Web Design</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--SKILLS-->
+<section class="py-10">
+    <div class="scroll-container">
                 <div id="skillsCarousel" class="overflow-hidden">
-                    <ul class="flex gap-16 px-8 py-10 animate-scroll">
+                    <ul class="flex gap-20 animate-scroll">
                     
                     <li class="relative flex flex-col items-center flex-shrink-0 group">
                         <i class="text-orange-500 fa-brands fa-html5 text-8xl"></i>
@@ -112,7 +345,7 @@
                     </li>
 
                     <li class="relative flex flex-col items-center flex-shrink-0 group">
-                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>MySQL</title><path d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 00-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 00-.195 4.41H0c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.064h1.095c.242 2.015.384 3.86.428 5.53zm4.017-4.08c-.378 2.045-.876 3.533-1.492 4.46-.482.716-1.01 1.073-1.583 1.073-.153 0-.34-.046-.566-.138v-.494c.11.017.24.026.386.026.268 0 .483-.075.647-.222.197-.18.295-.382.295-.605 0-.155-.077-.47-.23-.944L6.23 14.615h.91l.727 2.36c.164.536.233.91.205 1.123.4-1.064.678-2.227.835-3.483zm12.325 4.08h-2.63v-5.53h.885v4.85h1.745zm-3.32.135l-1.016-.5c.09-.076.177-.158.255-.25.433-.506.648-1.258.648-2.253 0-1.83-.718-2.746-2.155-2.746-.704 0-1.254.232-1.65.697-.43.508-.646 1.256-.646 2.245 0 .972.19 1.686.574 2.14.35.41.877.615 1.583.615.264 0 .506-.033.725-.098l1.325.772.36-.622zM15.5 17.588c-.225-.36-.337-.94-.337-1.736 0-1.393.424-2.09 1.27-2.09.443 0 .77.167.977.5.224.362.336.936.336 1.723 0 1.404-.424 2.108-1.27 2.108-.445 0-.77-.167-.978-.5zm-1.658-.425c0 .47-.172.856-.516 1.156-.344.3-.803.45-1.384.45-.543 0-1.064-.172-1.573-.515l.237-.476c.438.22.833.328 1.19.328.332 0 .593-.073.783-.22a.754.754 0 00.3-.615c0-.33-.23-.61-.648-.845-.388-.213-1.163-.657-1.163-.657-.422-.307-.632-.636-.632-1.177 0-.45.157-.81.47-1.085.315-.278.72-.415 1.22-.415.512 0 .98.136 1.4.41l-.213.476a2.726 2.726 0 00-1.064-.23c-.283 0-.502.068-.654.206a.685.685 0 00-.248.524c0 .328.234.61.666.85.393.215 1.187.67 1.187.67.433.305.648.63.648 1.168zm9.382-5.852c-.535-.014-.95.04-1.297.188-.1.04-.26.04-.274.167.055.053.063.14.11.214.08.134.218.313.346.407.14.11.28.216.427.31.26.16.555.255.81.416.145.094.293.213.44.313.073.05.12.14.214.172v-.02c-.046-.06-.06-.147-.105-.214-.067-.067-.134-.127-.2-.193a3.223 3.223 0 00-.695-.675c-.214-.146-.682-.35-.77-.595l-.013-.014c.146-.013.32-.066.46-.106.227-.06.435-.047.67-.106.106-.027.213-.06.32-.094v-.06c-.12-.12-.21-.283-.334-.395a8.867 8.867 0 00-1.104-.823c-.21-.134-.476-.22-.697-.334-.08-.04-.214-.06-.26-.127-.12-.146-.19-.34-.275-.514a17.69 17.69 0 01-.547-1.163c-.12-.262-.193-.523-.34-.763-.69-1.137-1.437-1.826-2.586-2.5-.247-.14-.543-.2-.856-.274-.167-.008-.334-.02-.5-.027-.11-.047-.216-.174-.31-.235-.38-.24-1.364-.76-1.644-.072-.18.434.267.862.422 1.082.115.153.26.328.34.5.047.116.06.235.107.356.106.294.207.622.347.897.073.14.153.287.247.413.054.073.146.107.167.227-.094.136-.1.334-.154.5-.24.757-.146 1.693.194 2.25.107.166.362.534.703.393.3-.12.234-.5.32-.835.02-.08.007-.133.048-.187v.015c.094.188.188.367.274.555.206.328.566.668.867.895.16.12.287.328.487.402v-.02h-.015c-.043-.058-.1-.086-.154-.133a3.445 3.445 0 01-.35-.4 8.76 8.76 0 01-.747-1.218c-.11-.21-.202-.436-.29-.643-.04-.08-.04-.2-.107-.24-.1.146-.247.273-.32.453-.127.288-.14.642-.188 1.01-.027.007-.014 0-.027.014-.214-.052-.287-.274-.367-.46-.2-.475-.233-1.238-.06-1.785.047-.14.247-.582.167-.716-.042-.127-.174-.2-.247-.303a2.478 2.478 0 01-.24-.427c-.16-.374-.24-.788-.414-1.162-.08-.173-.22-.354-.334-.513-.127-.18-.267-.307-.368-.52-.033-.073-.08-.194-.027-.274.014-.054.042-.075.094-.09.088-.072.335.022.422.062.247.1.455.194.662.334.094.066.195.193.315.226h.14c.214.047.455.014.655.073.355.114.675.28.962.46a5.953 5.953 0 012.085 2.286c.08.154.115.295.188.455.14.33.313.663.455.982.14.315.275.636.476.897.1.14.502.213.682.286.133.06.34.115.46.188.23.14.454.3.67.454.11.076.443.243.463.378z"/></svg>
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 00-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 00-.195 4.41H0c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.064h1.095c.242 2.015.384 3.86.428 5.53zm4.017-4.08c-.378 2.045-.876 3.533-1.492 4.46-.482.716-1.01 1.073-1.583 1.073-.153 0-.34-.046-.566-.138v-.494c.11.017.24.026.386.026.268 0 .483-.075.647-.222.197-.18.295-.382.295-.605 0-.155-.077-.47-.23-.944L6.23 14.615h.91l.727 2.36c.164.536.233.91.205 1.123.4-1.064.678-2.227.835-3.483zm12.325 4.08h-2.63v-5.53h.885v4.85h1.745zm-3.32.135l-1.016-.5c.09-.076.177-.158.255-.25.433-.506.648-1.258.648-2.253 0-1.83-.718-2.746-2.155-2.746-.704 0-1.254.232-1.65.697-.43.508-.646 1.256-.646 2.245 0 .972.19 1.686.574 2.14.35.41.877.615 1.583.615.264 0 .506-.033.725-.098l1.325.772.36-.622zM15.5 17.588c-.225-.36-.337-.94-.337-1.736 0-1.393.424-2.09 1.27-2.09.443 0 .77.167.977.5.224.362.336.936.336 1.723 0 1.404-.424 2.108-1.27 2.108-.445 0-.77-.167-.978-.5zm-1.658-.425c0 .47-.172.856-.516 1.156-.344.3-.803.45-1.384.45-.543 0-1.064-.172-1.573-.515l.237-.476c.438.22.833.328 1.19.328.332 0 .593-.073.783-.22a.754.754 0 00.3-.615c0-.33-.23-.61-.648-.845-.388-.213-1.163-.657-1.163-.657-.422-.307-.632-.636-.632-1.177 0-.45.157-.81.47-1.085.315-.278.72-.415 1.22-.415.512 0 .98.136 1.4.41l-.213.476a2.726 2.726 0 00-1.064-.23c-.283 0-.502.068-.654.206a.685.685 0 00-.248.524c0 .328.234.61.666.85.393.215 1.187.67 1.187.67.433.305.648.63.648 1.168zm9.382-5.852c-.535-.014-.95.04-1.297.188-.1.04-.26.04-.274.167.055.053.063.14.11.214.08.134.218.313.346.407.14.11.28.216.427.31.26.16.555.255.81.416.145.094.293.213.44.313.073.05.12.14.214.172v-.02c-.046-.06-.06-.147-.105-.214-.067-.067-.134-.127-.2-.193a3.223 3.223 0 00-.695-.675c-.214-.146-.682-.35-.77-.595l-.013-.014c.146-.013.32-.066.46-.106.227-.06.435-.047.67-.106.106-.027.213-.06.32-.094v-.06c-.12-.12-.21-.283-.334-.395a8.867 8.867 0 00-1.104-.823c-.21-.134-.476-.22-.697-.334-.08-.04-.214-.06-.26-.127-.12-.146-.19-.34-.275-.514a17.69 17.69 0 01-.547-1.163c-.12-.262-.193-.523-.34-.763-.69-1.137-1.437-1.826-2.586-2.5-.247-.14-.543-.2-.856-.274-.167-.008-.334-.02-.5-.027-.11-.047-.216-.174-.31-.235-.38-.24-1.364-.76-1.644-.072-.18.434.267.862.422 1.082.115.153.26.328.34.5.047.116.06.235.107.356.106.294.207.622.347.897.073.14.153.287.247.413.054.073.146.107.167.227-.094.136-.1.334-.154.5-.24.757-.146 1.693.194 2.25.107.166.362.534.703.393.3-.12.234-.5.32-.835.02-.08.007-.133.048-.187v.015c.094.188.188.367.274.555.206.328.566.668.867.895.16.12.287.328.487.402v-.02h-.015c-.043-.058-.1-.086-.154-.133a3.445 3.445 0 01-.35-.4 8.76 8.76 0 01-.747-1.218c-.11-.21-.202-.436-.29-.643-.04-.08-.04-.2-.107-.24-.1.146-.247.273-.32.453-.127.288-.14.642-.188 1.01-.027.007-.014 0-.027.014-.214-.052-.287-.274-.367-.46-.2-.475-.233-1.238-.06-1.785.047-.14.247-.582.167-.716-.042-.127-.174-.2-.247-.303a2.478 2.478 0 01-.24-.427c-.16-.374-.24-.788-.414-1.162-.08-.173-.22-.354-.334-.513-.127-.18-.267-.307-.368-.52-.033-.073-.08-.194-.027-.274.014-.054.042-.075.094-.09.088-.072.335.022.422.062.247.1.455.194.662.334.094.066.195.193.315.226h.14c.214.047.455.014.655.073.355.114.675.28.962.46a5.953 5.953 0 012.085 2.286c.08.154.115.295.188.455.14.33.313.663.455.982.14.315.275.636.476.897.1.14.502.213.682.286.133.06.34.115.46.188.23.14.454.3.67.454.11.076.443.243.463.378z"/></svg>
                         <span class="px-2 py-1 mt-3 text-sm text-white transition-opacity bg-gray-800 rounded-md opacity-0 group-hover:opacity-100">
                         MySQL
                         </span>
@@ -174,70 +407,48 @@
                         </span>
                     </li>
 
+                    <li class="relative flex flex-col items-center flex-shrink-0 group">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>WordPress</title><path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0"/></svg>
+                        <span class="px-2 py-1 mt-3 text-sm text-white transition-opacity bg-gray-800 rounded-md opacity-0 group-hover:opacity-100">
+                        WordPress
+                        </span>
+                    </li>
+
+                    <li class="relative flex flex-col items-center flex-shrink-0 group">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Elementor</title><path d="M12 0C5.372 0 0 5.372 0 12c0 6.626 5.372 12 12 12s12-5.372 12-12c0-6.626-5.372-12-12-12ZM9 17H7V7H9Zm8 0H11V15h6Zm0-4H11V11h6Zm0-4H11V7h6Z"/></svg>
+                        <span class="px-2 py-1 mt-3 text-sm text-white transition-opacity bg-gray-800 rounded-md opacity-0 group-hover:opacity-100">
+                        Elementor
+                        </span>
+                    </li>
+
+                    <li class="relative flex flex-col items-center flex-shrink-0 group">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>WooCommerce</title><path d="M.754 9.58a.754.754 0 00-.754.758v2.525c0 .42.339.758.758.758h3.135l1.431.799-.326-.799h2.373a.757.757 0 00.758-.758v-2.525a.757.757 0 00-.758-.758H.754zm2.709.445h.03c.065.001.124.023.179.067a.26.26 0 01.103.19.29.29 0 01-.033.16c-.13.239-.236.64-.322 1.199-.083.541-.114.965-.094 1.267a.392.392 0 01-.039.219.213.213 0 01-.176.12c-.086.006-.177-.034-.263-.124-.31-.316-.555-.788-.735-1.416-.216.425-.375.744-.478.957-.196.376-.363.568-.502.578-.09.007-.166-.069-.233-.228-.17-.436-.352-1.277-.548-2.524a.297.297 0 01.054-.222c.047-.064.116-.095.21-.102.169-.013.265.065.288.238.103.695.217 1.284.336 1.766l.727-1.387c.066-.126.15-.192.25-.199.146-.01.237.083.273.28.083.441.188.817.315 1.136.086-.844.233-1.453.44-1.828a.255.255 0 01.218-.147zm1.293.36c.056 0 .116.006.18.02.232.05.411.177.53.386.107.18.161.395.161.654 0 .343-.087.654-.26.94-.2.332-.459.5-.781.5a.88.88 0 01-.18-.022.763.763 0 01-.531-.384 1.287 1.287 0 01-.158-.659c0-.342.085-.655.258-.937.202-.333.462-.498.78-.498zm2.084 0c.056 0 .116.006.18.02.236.05.411.177.53.386.107.18.16.395.16.654 0 .343-.086.654-.259.94-.2.332-.459.5-.781.5a.88.88 0 01-.18-.022.763.763 0 01-.531-.384 1.287 1.287 0 01-.16-.659c0-.342.087-.655.26-.937.202-.333.462-.498.78-.498zm4.437.047c-.305 0-.546.102-.718.304-.173.203-.256.49-.256.856 0 .395.086.697.256.906.17.21.418.316.744.316.315 0 .559-.107.728-.316.17-.21.256-.504.256-.883s-.087-.673-.26-.879c-.176-.202-.424-.304-.75-.304zm-1.466.002a1.13 1.13 0 00-.84.326c-.223.22-.332.499-.332.838 0 .362.108.658.328.88.22.223.505.336.861.336.103 0 .22-.016.346-.052v-.54c-.117.034-.216.051-.303.051a.545.545 0 01-.422-.177c-.106-.12-.16-.278-.16-.48 0-.19.053-.348.156-.468a.498.498 0 01.397-.181c.103 0 .212.015.332.049v-.537a1.394 1.394 0 00-.363-.045zm12.414 0a1.135 1.135 0 00-.84.326c-.223.22-.332.499-.332.838 0 .362.108.658.328.88.22.223.506.336.861.336.103 0 .22-.016.346-.052v-.54c-.116.034-.216.051-.303.051a.545.545 0 01-.422-.177c-.106-.12-.16-.278-.16-.48 0-.19.053-.348.156-.468a.498.498 0 01.397-.181c.103 0 .212.015.332.049v-.537a1.394 1.394 0 00-.363-.045zm-9.598.06l-.29 2.264h.579l.156-1.559.395 1.559h.412l.379-1.555.164 1.555h.603l-.304-2.264h-.791l-.12.508c-.03.13-.06.264-.087.4l-.067.352a29.97 29.97 0 00-.258-1.26h-.771zm2.768 0l-.29 2.264h.579l.156-1.559.396 1.559h.412l.375-1.555.165 1.555h.603l-.305-2.264h-.789l-.119.508c-.03.13-.06.264-.086.4l-.066.352c-.063-.352-.15-.771-.26-1.26h-.771zm3.988 0v2.264h.611v-1.031h.012l.494 1.03h.645l-.489-1.019a.61.61 0 00.37-.552.598.598 0 00-.25-.506c-.167-.123-.394-.186-.68-.186h-.713zm3.377 0v2.264H24v-.483h-.63v-.414h.54v-.468h-.54v-.416h.626v-.483H22.76zm-4.793.004v2.264h1.24v-.483h-.627v-.416h.541v-.468h-.54v-.415h.622v-.482h-1.236zm2.025.432c.146.003.25.025.313.072.063.046.091.12.091.227 0 .156-.135.236-.404.24v-.54zm-15.22.011c-.104 0-.205.069-.301.211a1.078 1.078 0 00-.2.639c0 .096.02.2.06.303.049.13.117.198.196.215.083.016.173-.02.27-.106.123-.11.205-.273.252-.492.016-.077.023-.16.023-.246 0-.097-.02-.2-.06-.303-.05-.13-.116-.198-.196-.215a.246.246 0 00-.045-.006zm2.083 0c-.103 0-.204.069-.3.211a1.078 1.078 0 00-.2.639c0 .096.02.2.06.303.049.13.117.198.196.215.083.016.173-.02.27-.106.123-.11.205-.273.252-.492.013-.077.023-.16.023-.246 0-.097-.02-.2-.06-.303-.05-.13-.116-.198-.196-.215a.246.246 0 00-.045-.006zm4.428.006c.233 0 .354.218.354.66-.004.273-.038.46-.098.553a.293.293 0 01-.262.139.266.266 0 01-.242-.139c-.056-.093-.084-.28-.084-.562 0-.436.11-.65.332-.65Z"/></svg>
+                        <span class="px-2 py-1 mt-3 text-sm text-white transition-opacity bg-gray-800 rounded-md opacity-0 group-hover:opacity-100">
+                        WooCommerce
+                        </span>
+                    </li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </div>
-
-
-    <div class="grid grid-cols-1 gap-6 m-5 lg:grid-cols-3">
-        <div class="w-full p-6 transition-shadow shadow-lg border-2 border-[#1F1C2C] bg-transparent text-[#1F1C2C] rounded-2xl hover:shadow-2xl">
-            <div class="mb-4 text-6xl text-center">
-                <i class="fa-solid fa-object-ungroup"></i>
-            </div>
-            <h2 class="mb-6 text-3xl font-bold text-center">Responsive Design</h2>
-                <p class="text-base font-medium text-justify md:text-lg">
-                I create designs that adapt seamlessly to different screen sizes and devices, ensuring a great user experience for everyone.
-                </p>
-        </div>
-
-        <div class="w-full p-6 transition-shadow shadow-lg border-2 border-[#1F1C2C] bg-transparent text-[#1F1C2C] rounded-2xl hover:shadow-2xl">
-            <div class="mb-4 text-6xl text-center">
-                <i class="fa-solid fa-wand-magic-sparkles"></i>
-            </div>
-            <h2 class="mb-6 text-3xl font-bold text-center ">Modern UI Styling</h2>
-                <p class="text-base font-medium text-justify md:text-lg">
-                I focus on creating visually appealing and user-friendly interfaces that enhance the overall user experience.
-                </p>
-        </div>
-
-        <div class="w-full p-6 transition-shadow shadow-lg border-2 border-[#1F1C2C] bg-transparent text-[#1F1C2C] rounded-2xl hover:shadow-2xl">
-            <div class="mb-4 text-6xl text-center">
-                <i class="fa-solid fa-code"></i>
-            </div>
-            <h2 class="mb-6 text-3xl font-bold text-center">Clean Code</h2>
-                <p class="text-base font-medium text-justify md:text-lg">
-                I write clean, maintainable, and efficient code that follows best practices and industry standards.
-            </p>
-        </div>
-    </div>
 </section>
-
-
-
-
-
-
-
-<!--PROJECT-->
-
-
-<!--SOCIALS-->
-
 </main>
 
 <!--FOOTER-->
-<!-- footer class="py-4 text-white background-secondary">
-    <div class="flex justify-center mt-2 space-x-4 gray-text">
-        <a href="#" class="hover:text-gray-700">Facebook</a>
-        <a href="#" class="hover:text-gray-700">Twitter</a>
-        <a href="#" class="hover:text-gray-700">LinkedIn</a>
+<footer id="contact" class="py-4 text-white background-secondary">
+    <h2 class="my-3 mb-2 text-4xl font-bold text-center underline">Contact Me</h2>
+        <p class="mx-auto mt-3 text-xl font-medium text-center text-gray-500 lg:text-xl lg:w-9/12">
+            I'm always interested in hearing about new projects and opportunities.
+        </p>
+    <div class="flex justify-center my-5 space-x-4 gray-text"> 
+        <a href="https://www.facebook.com/aereengrc" class="text-4xl hover:text-gray-700"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="www.linkedin.com/in/eirene-grace-armilla-bb85b1298" class="text-4xl hover:text-gray-700"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/Aereen" class="text-4xl hover:text-gray-700"><i class="fa-brands fa-github"></i></a>
     </div>
-    <div class="container mx-auto text-center">
+
+    <div class="container mx-auto text-center text-md gray-text">
         <p>&copy; 2025 Eirene Grace Armilla. All rights reserved.</p>
     </div>
-</!-->
+</footer>
 
 <script src="./src/script.js"></script>
 <script src="../path/to/flowbite/dist/flowbite.min.js"></script>

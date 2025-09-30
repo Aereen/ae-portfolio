@@ -33,10 +33,14 @@ header {
 
 @keyframes scroll {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-50%); } /* Only move half because content is duplicated */
 }
 .animate-scroll {
   display: flex;
   width: max-content;
   animation: scroll 15s linear infinite;
+}
+.scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
 }
