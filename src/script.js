@@ -1,5 +1,5 @@
 //Text Typing Effect
-const phrases = ["Web Development", "Web Design", "Project Management", "UI/UX Design"];
+const phrases = ["Web Development", "Web Design", "UI/UX Design", "Project Management"];
     const typingElement = document.getElementById("typing-text");
 
         let phraseIndex = 0;
@@ -35,27 +35,47 @@ const phrases = ["Web Development", "Web Design", "Project Management", "UI/UX D
 window.addEventListener("DOMContentLoaded", type);
 
 // Modal Functionality
-    const openModal = document.getElementById("openModal");
-    const closeModal = document.getElementById("closeModal");
-    const modal = document.getElementById("capabilitiesModal");
+    const openModal1 = document.getElementById("openModal1");
+    const closeModal1 = document.getElementById("closeModal1");
+    const modal1 = document.getElementById("capabilitiesModal");
 
-    openModal.addEventListener("click", () => {
-        modal.classList.remove("hidden");
+    openModal1.addEventListener("click", () => {
+        modal1.classList.remove("hidden");
     });
 
-    closeModal.addEventListener("click", () => {
-        modal.classList.add("hidden");
+    closeModal1.addEventListener("click", () => {
+        modal1.classList.add("hidden");
     });
 
     // Close when clicking outside modal content
     window.addEventListener("click", (e) => {
-        if (e.target === modal) {
-        modal.classList.add("hidden");
+        if (e.target === modal1) {
+        modal1.classList.add("hidden");
         }
     });
 
+// Modal Functionality
+    const openModal2 = document.getElementById("openModal2");
+    const closeModal2 = document.getElementById("closeModal2");
+    const modal2 = document.getElementById("certificateModal");
+
+    openModal2.addEventListener("click", () => {
+        modal2.classList.remove("hidden");
+    });
+
+    closeModal2.addEventListener("click", () => {
+        modal2.classList.add("hidden");
+    });
+
+    // Close when clicking outside modal content
+    window.addEventListener("click", (e) => {
+        if (e.target === modal2) {
+        modal2.classList.add("hidden");
+        }
+    });
+
+// Mobile menu toggle
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile menu toggle
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     

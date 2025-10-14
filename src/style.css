@@ -22,6 +22,11 @@ body::-webkit-scrollbar-thumb:hover {
 .yellow-text {
     color: #CF9421; }
 
+.first-font {
+    font-family: Clash Display, sans-serif; }
+
+.second-font {
+    font-family: Geist, sans-serif; }
 body {
     background-color: #928DAB;}
 
